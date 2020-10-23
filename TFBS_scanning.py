@@ -1,6 +1,3 @@
-# Hannah Billings
-# 260883871
-
 import math
 
 # This function encodes a DNA nucleotide as an integer between 0 and 3
@@ -8,7 +5,7 @@ import math
 # It is useful for later and building matrixes.
 def encode(nucleotide): 
     """
-    Args:
+    Arguments:
         nucleotide: A string of one character
     Returns:
         An integer encoding the nucleotide, or -1 if not a valid nucleotide
@@ -24,7 +21,7 @@ def encode(nucleotide):
 
 def build_PFM(sequences):
     """
-    Args:
+    Arguments:
         sequences: A list of sequences of equal lengths
     Returns:
         The position Frequency Matrix build from the sequences, stored
@@ -40,7 +37,7 @@ def build_PFM(sequences):
 # The PWM is stored as a list of lists.
 def get_PWM_from_PFM(PFM, pseudocount):
     """
-    Args:
+    Arguments:
         PFM: A position frequency matrix, stored as a two-dimensional list
         pseudocount: A non-negative floating point number
     Returns:
@@ -56,7 +53,7 @@ def get_PWM_from_PFM(PFM, pseudocount):
 # This function calculates and returns the score, or likelihood a TF will bind, of a given sequence with given a PWM
 def score(sequence, PWM):
     """
-    Args:
+    Arguments:
         sequence: A DNA sequence
         PWM: A position weight matrix, of the same length as the sequence
     Returns:
@@ -71,7 +68,7 @@ def score(sequence, PWM):
 # This function identifies and returns the list of positions in the given sequence where the PWM score is larger or equal to the threshold
 def predict_sites(sequence, PWM, threshold = 0):
     """
-    Args:
+    Arguments:
         sequence: A DNA sequence
         PWM: A position weight matrix
         threshold (optional): Minimum score needed to be predicted as a binding site
@@ -108,7 +105,6 @@ def find_homodimer_sites(hits, D):
 if __name__ == "__main__":   
     
     # example code!
-    
     
     sites = ["ACGATG","ACAATG","ACGATC","ACGATC","TCGATC",
              "TCGAGC","TAGATC","TAAATC","AAAATC","ACGATA"]
